@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilihan Kado Buat Kamu</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="loading"></div>
+    <main>
+      <p
+        style="
+          color: rgb(77, 62, 23);
+          font-size: 20px;
+          text-align: center;
+          padding-bottom: 25px;
+        "
+      >
+        Kamu Cuma Mendapatkan 1x Spin, Berdoa ya & Semoga Beruntung :D
+      </p>
+      <section class="main">
+        <span>
+          <ul class="wheel"></ul>
+        </span>
+        <button class="btn--wheel" id="Btn" onclick="myFunction()">SPIN</button>
+      </section>
+      <h1 class="msg"></h1>
+    </main>
+    <script src="./main.js"></script>
+    <script>
+      var loading = document.getElementById("loading");
+
+      window.addEventListener("load", function () {
+        loading.style.display = "none";
+      });
+    </script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("Btn");
+        x.disabled = true;
+      }
+    </script>
+  </body>
+</html>

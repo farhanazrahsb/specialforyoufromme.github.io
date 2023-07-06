@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kartu Ucapan Buat Kamu</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="loading"></div>
+    <div id="parentpopup">
+      <div class="closepopup"><a href="#" onclick="tutuppopup()">X</a></div>
+      <div class="childpopup">
+        Ada yang spesial khusus buat kamu dihari bahagiamu ini, mau lihat? Klik
+        tombol close disudut atas ya :D
+      </div>
+    </div>
+
+    <!-- Swiper Code -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Swiper Slides Code -->
+        <div class="swiper-slide bg1"></div>
+        <div class="swiper-slide bg2"></div>
+        <div class="swiper-slide bg3"></div>
+        <div class="swiper-slide bg4"></div>
+        <div class="swiper-slide bg5"></div>
+        <div class="swiper-slide bg6">
+          <a href="spinwheel/index.html"
+            ><button>Mau kado? Klik disini ya</button></a
+          >
+        </div>
+        <!-- Swiper Slides Code End -->
+      </div>
+    </div>
+    <!-- Swiper Code End -->
+
+    <script>
+      function tutuppopup() {
+        document.getElementById("parentpopup").style.display = "none";
+        var music = new Audio("audio/ulangtahun.mp3");
+        music.play();
+
+        // start
+        const start = () => {
+          setTimeout(function () {
+            confetti.start();
+          }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+        const stop = () => {
+          setTimeout(function () {
+            confetti.stop();
+          }, 10000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+      }
+    </script>
+
+    <script>
+      var loading = document.getElementById("loading");
+
+      window.addEventListener("load", function () {
+        loading.style.display = "none";
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+      });
+    </script>
+
+    <script src="js/confetti.js"></script>
+    <!-- Confetti  JS-->
+  </body>
+</html>
