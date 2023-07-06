@@ -136,7 +136,7 @@
       music.play();
       isRotating = false;
 
-      showMsg.innerHTML = `Kamu Mendapatkan Hadiah "${gift.text}", Kirim Ke WA Ku Ya Jawabannya | <a href="https://wa.me/085270163310?text=Sayang aku dapat ${gift.text} nih, makasi yaa sayang hehe :*" style="text-decoration:none; color:blue;">Klik Disini!</a>`;
+      showMsg.innerHTML = `Kamu Mendapatkan Hadiah "${gift.text}", Kirim Ke WA Ku Ya Jawabannya | <a href="https://wa.me/6285270163310?text=Sayang aku dapat ${gift.text} nih, makasi yaa sayang hehe :*" style="text-decoration:none; color:blue;">Klik Disini!</a>`;
 
       clearTimeout(timer);
     }, timeRotate);
